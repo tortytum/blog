@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Header(props) {
   return (
     <header>
-      <Link to="/">
+      <Link to="/blog">
         <div className={styles.headerLeft}>
           <img width={40} height={40} src={Logo} alt="logo" />
           <div>

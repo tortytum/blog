@@ -93,7 +93,7 @@ function App() {
         />
         <Routes>
           <Route
-            path="/"
+            path="/blog"
             exact
             element={
               <Home
