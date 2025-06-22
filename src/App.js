@@ -28,12 +28,6 @@ function App() {
             `https://684d1f0b65ed08713915240b.mockapi.io/items?page=${currentPage}&limit=3`,
           ),
         ]);
-        // const favoriteItemsResponse = await axios.get(
-        //   'https://684d1f0b65ed08713915240b.mockapi.io/favoriteItems',
-        // );
-        // const itemsRespons = await axios.get(
-        //   `https://684d1f0b65ed08713915240b.mockapi.io/items?page=${currentPage}&limit=3`,
-        // );
         setIsLoading(false);
         setFavoriteItems(favoriteItemsResponse.data);
         setCountFavoriteItems(favoriteItemsResponse.data.length);
@@ -94,7 +88,6 @@ function App() {
         <Routes>
           <Route
             path="/blog/"
-            exact
             element={
               <Home
                 searchValue={searchValue}
@@ -112,9 +105,6 @@ function App() {
             }
           />
         </Routes>
-        {/* <Routes>
-        <Route path="/user" element={1232324324} />
-      </Routes> */}
       </div>
     </AppContext.Provider>
   );
