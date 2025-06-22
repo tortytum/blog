@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import Overlay from './components/Overlay';
 import axios from 'axios';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import AppContext from './context';
 
@@ -79,6 +79,9 @@ function App() {
         favoriteOpened,
       }}>
       <div className="wrapper">
+        <Routes>
+          <Route path="/blog" element={<Navigate to="/blog/" />} />
+        </Routes>
         <Overlay onClose={() => setFavoriteOpened(false)} onRemove={onRemoveItem} />
 
         <Header
